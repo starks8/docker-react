@@ -8,7 +8,6 @@ script:
   - docker run -e CI=true skrfrontend/frontend npm run test
 
 language: generic
-
 deploy: 
   provider: elasticbeanstalk
   region: "us-east-1"
