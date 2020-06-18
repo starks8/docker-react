@@ -1,0 +1,10 @@
+sudo: required
+services: 
+  - docker
+before_install:
+  - docker build -t skrfrontend/frontend -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true skrfrontend/frontend npm run test
+
+language: generic
